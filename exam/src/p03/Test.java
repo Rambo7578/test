@@ -16,9 +16,9 @@ public class Test {
 	
 	
 	
-	public static void main(String[] args) {
-		Test t= new Test("가나다ABC123");
-		t.print();
+//	public static void main(String[] args) {
+//		Test t= new Test("가나다ABC123");
+//		t.print();
 //		String str = "나 여나기있어요 나";
 //		t.print(str);
 //		str=str.replace("나","홍경철");
@@ -27,6 +27,12 @@ public class Test {
 		
 		//일반 인덱스{글자 위치(숫자), 뒤에서 부터 찾고 싶으면lastIndex}
 		
+	
+	public static void main(String[] args) {
+		ObjectExam oe=new ObjectExam();
+		oe.inputNums();
+		GuGuDan ggd=new GuGuDan();
+		ggd.printLoop(oe);;
 		
 		
 	}
