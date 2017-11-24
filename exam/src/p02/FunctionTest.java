@@ -6,7 +6,7 @@ public class FunctionTest {
 		System.out.println(num1+num2);
 	}
 	
-	static String add2(int num1,int num2) {
+	static void add2(int num1,int num2) {
 		
 		System.out.println(num1+num2);
 	

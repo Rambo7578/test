@@ -32,7 +32,7 @@ public class Test {
 		ObjectExam oe=new ObjectExam();
 		oe.inputNums();
 		GuGuDan ggd=new GuGuDan();
-		ggd.printLoop(oe);;
+		ggd.printLoop(oe);
 		
 		
 	}
