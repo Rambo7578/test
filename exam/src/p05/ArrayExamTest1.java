@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class ArrayExamTest1 {
 	int num1;
 	int num2;
-	int[][] numArr;
+	int[][] numArr;   //맴버변수
 	
 	void inputNums() {
 		Scanner scanner;

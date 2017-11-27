@@ -1,5 +1,7 @@
 package p05;
 
+import java.util.Scanner;
+
 public class TotalExam {
 	
 		int a;//정해져있는 데이터타입
@@ -20,11 +22,22 @@ public class TotalExam {
 		
 		// String랑 String[]스트링 배열은 전혀 다른다.
 			
+			System.out.println("스트링배열 변수의 방 갯수를 입력해주세요");
+			Scanner s =new Scanner(System.in);
+			int length = s.nextInt();
 			
-			String[] strarr=new String[3];
-			strarr[0]="123";
-			strarr[1]="123";
-			strarr[2]="123";
+			String[] strArr=new String[length];
+			
+//			for (int i=0;i<strArr.length;i++) {
+//				System.out.println((i+1)+"번째 방의 값을 입력해주세요");
+//				strArr[i]=s.nextInt()+"";
+			
+			
+			for (int i=0;i<strArr.length;i++) {
+				System.out.println((i+1)+"번째 방의 값을 입력해주세요");
+				
+			}
+			
 		
 		}
 }
