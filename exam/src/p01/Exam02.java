@@ -9,6 +9,7 @@ public class Exam02 {
 		int b = s.nextInt();
 		String op = s.nextLine().trim();
 		int result = 0;
+		
 		if (op.equals("+")) {
 			result = a + b;
 		}else if(op.equals("-")) {

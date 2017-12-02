@@ -7,7 +7,8 @@ public class ArryExam {
 		int a3=3;
 		int a4=4;
 		int a5=5;
-		int[]arr= {1,2,3,4,5};
+		int[]arr= {1,2,3,4,5};//선언과 동시에 초기화 입력하는 방식
+		
 		int[]arr2=new int[5];
 		arr2[0]=1;
 		arr2[1]=2;
