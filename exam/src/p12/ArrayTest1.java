@@ -13,7 +13,7 @@ public class ArrayTest1 {
 		sl=new ArrayList<Integer>();
 		Scanner s= new Scanner("최대");
 		min=s.nextInt();
-		Scanner s= new Scanner("최소");
+		Scanner s1= new Scanner("최소");
 		max=s.nextInt();
 		
 	}
