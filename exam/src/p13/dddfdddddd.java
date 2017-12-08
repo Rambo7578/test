@@ -10,7 +10,7 @@ public class dddfdddddd {
     
     al.add(pss);
     pss.setAge(2);
-    				//만약 여기에 new~~가 들어가면 방 번호는 변경 안됨
+    				//만약 여기에 new~~가 들어가면 방 번호는 변경 안됨 이어짐 쭈우우우우우우욱
     al.add(pss);
     pss.setAge(3);
     
