@@ -9,6 +9,7 @@ public class Excute {
 	public static void main(String[]args) {
 		try {
 			UserDAO udao=new UserDAO();
+			udao.openCon();
 			HashMap<String,Object>hm=new HashMap<String,Object>();
 			
 			hm.put("uiname", "test");
@@ -18,6 +19,8 @@ public class Excute {
 			hm.put("address", "서울");
 			udao.insertUser(hm);
 			udao.deleteUser(9);
+			udao.commit();
+			
 			ArrayList<HashMap<String,Object>> userList= udao.getUserList();
 			for(HashMap<String,Object> user:userList) {
 				System.out.println(user);
@@ -27,6 +30,12 @@ public class Excute {
 			e.printStackTrace();
 		} catch (SQLException e) {
 			e.printStackTrace();
+		}finally {
+			if(udao!=null) {
+				try {
+					udao.closeCon();
+				}
+			}
 		}
 		
 		

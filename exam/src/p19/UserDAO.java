@@ -7,21 +7,32 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-import p18.Connector;
-
 public class UserDAO {
 
 	Connector c;
 	Connection con;
 
-	UserDAO() throws ClassNotFoundException, SQLException {
+	UserDAO() throws ClassNotFoundException {
 		c = new Connector();
-		con = c.getConnection();
+		
 
 	}
+	public void openCon()throws SQLException {
+		con=c.getConnection();
+				
+	}
+	public void closeCon()throws SQLException {
+		c.close();
+	}
+	public void commit()throws SQLException {
+		con.commit();
+	}
+	public void rollback()throws SQLException {
+		con.rollback();
+	}
 
-	public ArrayList<HashMap<String, Object>> getUserList()  {
-
+	public ArrayList<HashMap<String, Object>> getUserList() throws SQLException  {
+		con = c.getConnection();
 		String sql = "select*from user_info";
 		PreparedStatement ps = con.prepareStatement(sql);
 		ResultSet rs = ps.executeQuery();
@@ -30,7 +41,7 @@ public class UserDAO {
 			hm.put("uidd", rs.getString("uidd"));
 			hm.put("uino", rs.getInt("uino"));
 		}
-		con.close();
+		
 		return null;
 
 	}
@@ -39,15 +50,15 @@ public class UserDAO {
 		String sql = "insert into user_info(uiname,riage,uiid," 
 				+ "uipwd,address,cino,uiregdate)\r\n"
 				+ "values(?,?,?,?,?,1,new())";
-		con = c.getConnection();
+		
 		PreparedStatement ps = con.prepareStatement(sql);
 		ps.setString(1,(String)hm.get("uiname"));
-		ps.setInt(2,(int)hm.get("uiage"));
+		ps.setInt(2,(Integer)hm.get("uiage"));
 		ps.setString(3,(String)hm.get("uiid"));
 		ps.setString(4,(String)hm.get("uipwd"));
 		ps.setString(5,(String)hm.get("address"));
 		int result = ps.executeUpdate();
-		con.close();
+
 		return result;
 
 	}
@@ -62,9 +73,9 @@ public class UserDAO {
 		PreparedStatement ps = con.prepareStatement(sql);
 		ps.setInt(1, userNo);
 		int result = ps.executeUpdate();
-		con.close();
 
 		return result;
 	}
+	
 
 }
