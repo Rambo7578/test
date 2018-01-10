@@ -29,7 +29,7 @@ public class Exam {
 			int n=r.nextInt(51)+50;
 			hm.putAll(e.getAL(n));
 		}
-		Iterator<Integer>it=hm.keySet().iterator();
+		Iterator<Integer>it=hm.keySet().iterator();  // 반복자 Iterator
 		while(it.hasNext()) {
 			Integer key=it.next();
 			
