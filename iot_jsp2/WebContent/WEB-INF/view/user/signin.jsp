@@ -21,10 +21,10 @@
 <body>
 	<jsp:include page="/WEB-INF/view/common/header.jspf" flush="false" />
 
-	<div class="container">
+			<div class="container">
 			<div class="row main">
 				<div class="main-login main-center">
-				<h5>Sign up once and watch any of our free demos.</h5>
+				<h5>Sign up</h5>
 					<form class="" method="post" action="#">
 						
 						<div class="form-group">
@@ -72,29 +72,28 @@
 							<div class="cols-sm-10">
 								<div class="input-group">
 									<span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
-									<select type="password" class="form-control" name="ciNo" id="ciNo"  placeholder="반" /></select>
+									<select type="text" class="form-control" name="ciNo" id="ciNo"  placeholder="반"/></select>
 								</div>
 							</div>
 						</div>
+						
 						<div class="form-group">
-							<label for="text" class="cols-sm-2 control-label">주소</label>
+							<label for="password" class="cols-sm-2 control-label">주소</label>
 							<div class="cols-sm-10">
 								<div class="input-group">
 									<span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
-									<input type="password" class="form-control" name="address" id="address"  placeholder="주소"/>
+									<input type="text" class="form-control" name="address" id="address"  placeholder="주소"/>
 								</div>
 							</div>
 						</div>
 
-						<input
-							class="btn btn-lg btn-primary btn-block" type="button"
-							id="singnBtn" value="Signin" onclick="signin()">
+						<input	class="btn btn-lg btn-primary btn-block" type="button" id="singnBtn" value="signin" onclick="signin()">
+					
 						
 					</form>
 				</div>
 			</div>
 		</div>
-
 		 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->

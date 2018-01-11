@@ -7,22 +7,15 @@
 
 <title>RamBo의 잘하고 싶은 페이지</title>
 
-<link
-	href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700|Lato:400,100,300,700,900'
-	rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700|Lato:400,100,300,700,900' rel='stylesheet' type='text/css'>
 
-<link rel="stylesheet" href="<%=rootPath%>/ui/css/login/style.css" />
+
 <link rel="stylesheet" href="<%=rootPath%>/ui/css/login/font-awesome.css" />
 <link rel="stylesheet" href="<%=rootPath%>/ui/css/login/demo.css" />
+<link rel="stylesheet" href="<%=rootPath%>/ui/css/bootstrap-theme.min.css" />
+<link rel="stylesheet" href="<%=rootPath%>/ui/css/bootstrap.min.css" />
 <link rel="stylesheet" href="<%=rootPath%>/ui/css/style_login.css" />
-
-
 </head>
-
-
-
-
-
 
 <body>
 	<jsp:include page="/WEB-INF/view/common/header.jspf" flush="false" />
@@ -36,8 +29,9 @@
 			<div class="box-header">
 				<h2>Log In</h2>
 			</div>
-			<label for="Username">Username</label> <br /> <input type="text"
-				id="userId"> <br /> <label for="password">Password</label> <br />
+			<label for="Username">Username</label> <br /> 
+			<input type="text" id="userId"> <br /> 
+			<label for="password">Password</label> <br />
 			<input type="password" id="userPwd"> <br/> 
 			
 			<input type="checkbox" id="saveId">save</br>
