@@ -98,7 +98,7 @@ function checkValue(){
 		url : '<%=rootPath%>/user/login',
 		data : param,
 		type :'get',
-		success:function(res){
+		success:function(res){               
 			var obj = JSON.parse(res);
 			alert(obj.msg);
 			if(obj.login=="ok"){
